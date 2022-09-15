@@ -42,9 +42,11 @@ const typeController = (e) => {
 
   const newLetterCorrect = validate(newLetter);
 
+
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
+    errorCount = errorCount + 1;
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
   }
 
@@ -91,7 +93,7 @@ const gameOver = () => {
   startTime = null;
   errorCount = 0;
   userText = "";
-  display.classList.add("inactive", result);
+  display.classList.add("inactive");
 };
 
 const closeModal = () => {
