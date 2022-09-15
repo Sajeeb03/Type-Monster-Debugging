@@ -139,3 +139,8 @@ setInterval(() => {
 
   document.getElementById("show-time").innerHTML = `${startTime ? Math.floor(timeSpent) : 0} seconds`;
 }, 1000);
+
+
+const showBlogs = () => {
+  location.href = ('blog.html')
+}
