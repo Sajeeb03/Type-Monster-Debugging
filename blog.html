@@ -16,89 +16,103 @@
             <h1 class="text-white text-center fw-bolder">WELCOME TO MY <span class="text-warning">BLOG</span></h1>
         </header>
         <main>
-            <div class="container text-center">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body bg-info">
-                                <h5 class="card-title">Differences Between Local Storage and session storage.</h5>
-                                <p class="card-text">There are different kinds of storage like local storage session
-                                    storage and cookies. If you wanna know more then click below.</p>
-                                <button id="first" onclick="showDetails('first')" class="btn btn-primary"
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button>
-                                <div class="modal fade" id="exampleModal" tabindex="-1"
-                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Differences Between Local
-                                                    Storage and session storage.</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body text-start">
-                                                localStorage and sessionStorage are relatively new APIs (meaning, not
-                                                all legacy browsers will support them) and are near identical (both in
-                                                APIs and capabilities) with the sole exception of persistence.
-                                                sessionStorage (as the name suggests) is only available for the duration
-                                                of the browser session (and is deleted when the tab or window is closed)
-                                                - it does, however, survive page reloads (source DOM Storage guide -
-                                                Mozilla Developer Network).
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item mb-5 rounded">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            Local storage and session storage.
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Here is the discussion about local storage and session storage</strong> <br>
+                            <p>
+                                localStorage and sessionStorage are relatively new APIs (meaning, not all legacy browsers will
+                                support them) and are near identical (both in APIs and capabilities) with the sole exception of
+                                persistence. sessionStorage (as the name suggests) is only available for the duration of the browser
+                                session (and is deleted when the tab or window is closed) - it does, however, survive page reloads
+                                (source DOM Storage guide - Mozilla Developer Network).</p>
 
-                                                Clearly, if the data you are storing needs to be available on an ongoing
-                                                basis then localStorage is preferable to sessionStorage - although you
-                                                should note both can be cleared by the user so you should not rely on
-                                                the continuing existence of data in either case.
+                                <p>Clearly, if the data you are storing needs to be available on an ongoing basis then localStorage is preferable to
+                                    sessionStorage - although you should note both can be cleared by the user so you should not rely on the continuing
+                                    existence of data in either case.</p>
 
-                                                localStorage and sessionStorage are perfect for persisting non-sensitive
-                                                data needed within client scripts between pages (for example:
-                                                preferences, scores in games). The data stored in localStorage and
-                                                sessionStorage can easily be read or changed from within the
-                                                client/browser so should not be relied upon for storage of sensitive or
-                                                security-related data within applications.
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <p> localStorage and sessionStorage are perfect for persisting non-sensitive data needed within client scripts between
+                                    pages
+                                    (for example: preferences, scores in games). The data stored in localStorage and sessionStorage can easily be read
+                                    or
+                                    changed from within the client/browser so should not be relied upon for storage of sensitive or security-related
+                                    data
+                                    within applications.
+                                </p>
                                 </div>
-                            </div>
+                </div>
+                </div>
+                <div class="accordion-item mb-5 rounded">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            Global Scope and Local Scope.
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Here is the discussion about global scope and local scope.</strong>
+                            <p>
+                                Local Scope occurs when you create a variable inside a function. By doing that, the visibility and
+                                accessibility of the variable is only allowed within that function. Any variable created inside the
+                                yellow box is a local variable, just like any variable inside blue box is a global one
+                            </p>
+                            <p>
+                                The Javascript global scope is the context where everything in a Javascript program executes by default.
+                                This scope includes all variables, objects, and references that are not contained within a customized
+                                scope defined by a programmer. Global scope is the entire Javascript execution environment.
+                            </p>
+                        </div>
+                        </div>
+                        </div>
+                <div class="accordion-item mb-5 rounded">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Accordion Item #3
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
+                            adds the appropriate classes that we use to style each element. These classes control the overall
+                            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
+                            CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
+                            <code>.accordion-body</code>, though the transition does limit overflow.
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body bg-info">
-                                <h5 class="card-title">Differences Between Local Storage and session storage.</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <button id="first" onclick="showDetails('first')" class="btn btn-primary"
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body bg-info">
-                                <h5 class="card-title">Differences Between Local Storage and session storage.</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <button id="first" onclick="showDetails('first')" class="btn btn-primary"
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-body bg-info">
-                                <h5 class="card-title">Differences Between Local Storage and session storage.</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <button id="first" onclick="showDetails('first')" class="btn btn-primary"
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button>
-                            </div>
+                </div>
+                <div class="accordion-item mb-5 rounded">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Accordion Item #3
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the third item's accordion body</strong>
+                            <p>
+                                Local Scope occurs when you create a variable inside a function. By doing that, the visibility and
+                                accessibility of the variable is only allowed within that function. Any variable created inside the
+                                yellow box is a local variable, just like any variable inside blue box is a global one
+                            </p>
+                            <p>
+                                The Javascript global scope is the context where everything in a Javascript program executes by default.
+                                This scope includes all variables, objects, and references that are not contained within a customized
+                                scope defined by a programmer. Global scope is the entire Javascript execution environment.
+                            </p>
                         </div>
                     </div>
                 </div>
