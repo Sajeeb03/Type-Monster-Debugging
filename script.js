@@ -67,8 +67,8 @@ const gameOver = () => {
   // the current time is the finish time
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
-  const timeTaken = (finishTime - startTime) / 1000;
-
+  const timeTakenFloat = (finishTime - startTime) / 1000;
+  const timeTaken = Math.floor(timeTakenFloat);
   // show result modal
   resultModal.innerHTML = "";
   resultModal.classList.toggle("hidden");
@@ -91,7 +91,7 @@ const gameOver = () => {
   startTime = null;
   errorCount = 0;
   userText = "";
-  display.classList.add("inactive");
+  display.classList.add("inactive", result);
 };
 
 const closeModal = () => {
@@ -135,5 +135,5 @@ setInterval(() => {
   const timeSpent = (currentTime - startTime) / 1000;
 
 
-  document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
+  document.getElementById("show-time").innerHTML = `${startTime ? Math.floor(timeSpent) : 0} seconds`;
 }, 1000);
